@@ -1,0 +1,55 @@
+header.bg-banner {
+    position: fixed;
+    overflow: hidden;
+}
+.bg-banner {
+    position: relative;
+    overflow: hidden;
+}
+.bg-banner::before {
+    z-index: -1;
+    scale: 2.5;
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('/assets/images/home/bg-13.jpg');
+    background-size: cover;
+    animation: rotate 10s linear infinite forwards;
+    
+}
+header.bg-banner::before {
+    z-index: -1;
+    /* scale: 2.5; */
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('/assets/images/home/bg-13.jpg');
+    background-size: cover;
+    background-position: center center;
+    animation: none ;
+    
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+.white-mask {
+    background-color: rgba(255, 255, 255, .8);
+    backdrop-filter: blur(100px);
+}
+
+.bg-fixed {
+    background-image: url('/assets/images/home/bg-8.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.bg-fixed .white-mask {
+    background-color: rgba(255, 255, 255, .5);
+    backdrop-filter: blur(0px);
+}
+
