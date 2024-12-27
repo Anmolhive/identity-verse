@@ -12,7 +12,7 @@ header.bg-banner {
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url('assets/images/home/bg-13.jpg');
+    background-image: url('../images/home/bg-13.jpg');
     background-size: cover;
     animation: rotate 10s linear infinite forwards;
     
@@ -23,7 +23,7 @@ header.bg-banner::before {
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url('assets/images/home/bg-13.jpg');
+    background-image: url('../images/home/bg-13.jpg');
     background-size: cover;
     background-position: center center;
     animation: none ;
@@ -42,7 +42,7 @@ header.bg-banner::before {
 }
 
 .bg-fixed {
-    background-image: url('assets/images/home/bg-8.jpg');
+    background-image: url('../images/home/bg-8.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
