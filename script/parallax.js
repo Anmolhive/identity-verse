@@ -10,8 +10,8 @@ window.onload = function () {
   lax.addElements(".selector", {
     scrollY: {
       translateY: [
-        ["elCenterY", "elOutY"], // Scroll range
-        ["elCenterY", "screenHeight"], // Translation range
+        [0, 1000], // Scroll range
+        [0, 500], // Translation range
       ],
     },
   });
@@ -34,28 +34,29 @@ window.onload = function () {
 
   lax.addElements(".page-header", {});
 
-  if (window.innerWidth > 767) {
-    lax.addElements(
-      ".page-header",
-      {
-        scrollY: {
-          translateY: [
-            [0, 500], // Scroll range
-            [0, 30], // Translation range
-          ],
-        },
+  lax.addElements(
+    ".page-header",
+    {
+      scrollY: {
+        translateY: [
+          [0, 500],
+          {
+            767: [0, 0],
+            1400: [0, 30],
+          },
+        ],
       },
-      {
-        onUpdate: function (driverValues, domElement) {
-          const scrollY = driverValues.scrollY[0];
+    },
+    {
+      onUpdate: function (driverValues, domElement) {
+        const scrollY = driverValues.scrollY[0];
 
-          if (scrollY > 200) {
-            domElement.classList.add("bg-header");
-          } else {
-            domElement.classList.remove("bg-header");
-          }
-        },
-      }
-    );
-  }
+        if (scrollY > 200) {
+          domElement.classList.add("bg-header");
+        } else {
+          domElement.classList.remove("bg-header");
+        }
+      },
+    }
+  );
 };
