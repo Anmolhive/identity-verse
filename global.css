@@ -2,6 +2,7 @@
 
 * {
   font-family: 'Raleway', sans-serif !important;
+  scroll-behavior: smooth;
 }
 
 
@@ -10,6 +11,9 @@
 }
 .text-amber {
     color: #FF8343;
+}
+.text-light-blue {
+  color: #5272F2;
 }
 
 .nav-links a {
@@ -41,6 +45,9 @@
 }
 
 @media (max-width: 768px) {
+  .page-header {
+    backdrop-filter: blur(10px);
+  }
   .page-header .navbar {
     padding-bottom: 1rem !important;
   }

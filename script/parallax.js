@@ -63,4 +63,16 @@ window.onload = function () {
       },
     }
   );
+
+  lax.addElements(".parellex-effect", {
+    scrollY: {
+      translateY: [
+        ['elInY', 'elOutY + 100'],
+        {
+          767: [0, 0],
+          1400: ['screenHeight', 50],
+        },
+      ],
+    },
+  });
 };

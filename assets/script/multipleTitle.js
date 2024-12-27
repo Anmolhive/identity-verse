@@ -1,4 +1,4 @@
-const multipleTitle = (id, titles = [], speed = 50, delay = 200) => {
+const multipleTitle = (id, titles = [], speed = 100, delay = 200) => {
     const maxWidth = titles.reduce((max, title) => Math.max(max, title.length), 0);
     let i = 0;
 

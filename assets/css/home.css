@@ -53,3 +53,17 @@ header.bg-banner::before {
     backdrop-filter: blur(0px);
 }
 
+
+.bg-2 {
+    background-image: url('../images/home/bg-9.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.bg-2>div:first-child {
+    background-color: rgba(255, 255, 255, .5);
+    /* backdrop-filter: blur(100px); */
+}
+
+
