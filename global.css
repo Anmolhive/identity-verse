@@ -19,6 +19,35 @@
 .nav-links a:hover {
     color: #FF8343;
 }
+
+.bg-header .navbar {
+  /* background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+  animation: bgWhite 300ms ease-in-out 1 forwards;
+}
+
+@keyframes bgWhite {
+  to {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+}
+
+.menu-sm {
+  transform: translateX(-200px) !important;
+  width: 250px !important;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding-bottom: .5rem;
+  }
+}
 /* CTA Button From Uiverse.io by mobinkakei */ 
 .cta {
     display: flex;
@@ -36,6 +65,8 @@
     align-items: center;
     letter-spacing: .1rem;
     text-transform: uppercase;
+    transition: 0.2s;
+
   }
   
   .cta:focus {
@@ -43,18 +74,18 @@
   }
   
   .cta:hover {
-    transition: 0.5s;
+    transition: 0.2s;
     box-shadow: 10px 10px 0 #0d9488;
     letter-spacing: .2rem;
   }
   
   .cta .second {
-    transition: 0.5s;
+    transition: 0.2s;
     margin-right: 0px;
   }
   
   .cta:hover .second {
-    transition: 0.5s;
+    transition: 0.2s;
     margin-right: 45px;
   }
   
@@ -70,12 +101,12 @@
   }
   
   .one {
-    transition: 0.4s;
+    transition: 0.2s;
     transform: translateX(-60%);
   }
   
   .two {
-    transition: 0.5s;
+    transition: 0.2s;
     transform: translateX(-30%);
   }
   
@@ -106,4 +137,6 @@
       fill: white;
     }
   }
+
+
   
