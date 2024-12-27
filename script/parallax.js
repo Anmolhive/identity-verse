@@ -10,8 +10,12 @@ window.onload = function () {
   lax.addElements(".selector", {
     scrollY: {
       translateY: [
-        [0, 1000], // Scroll range
-        [0, 500], // Translation range
+        [0, 1000],
+        {
+            767: [0, 200],
+            1400: [0, 1000],
+        } // Scroll range
+        
       ],
     },
   });
