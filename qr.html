@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Scanner</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.8/html5-qrcode.min.js" integrity="sha512-r6rDA7W6ZeQhvl8S7yRVQUKVHdexq+GAlNkNNqVC7YyIV+NwqCTJe2hDWCiffTyRNOeGEzRRJ9ifvRm/HCzGYg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div style="text-align: center;">
+        <h2>QR Code Scanner</h2>
+        <div id="qr-reader" style="width: 500px; height: 500px;"></div>
+        <p>Scanned result: <span id="result"></span></p>
+    </div>
+
+    <script>
+        // Function to handle successful QR code scan
+        function onScanSuccess(decodedText, decodedResult) {
+            // Display the decoded QR code
+            document.getElementById("result").textContent = decodedText;
+        }
+
+        // Function to handle error in case of scan failure
+        function onScanError(errorMessage) {
+            console.warn(errorMessage);
+        }
+
+        // Initialize the QR scanner
+        const qrCodeScanner = new Html5Qrcode("qr-reader");
+
+        // Start the QR scanner
+        qrCodeScanner.start(
+            { facingMode: "environment" }, // Use the environment camera
+            {
+                fps: 10, // Set frames per second
+                qrbox: 250, // Set the QR box size
+            },
+            onScanSuccess,
+            onScanError
+        );
+    </script>
+</body>
+</html>
